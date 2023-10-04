@@ -18,7 +18,7 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001896066430"))
 OWNER_ID = int(os.environ.get("OWNER_ID", "1216307744"))
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "https://t.me/+KEUXcl2WUT02MzA1")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://hebapir376:ravi1234@cluster0.x9pmpfx.mongodb.net/?retryWrites=true&w=majority")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "https://t.me/+UXi3l-72TeMxOWU9"))
