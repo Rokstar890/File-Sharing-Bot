@@ -10,13 +10,13 @@ class Bot(Client):
     def __init__(self):
         super().__init__(
             "Bot",
-            api_hash=API_HASH,
-            api_id=APP_ID,
+            api_hash=eff30dac5504a8660e69bfe19f668571,
+            api_id=23762978,
             plugins={
                 "root": "plugins"
             },
             workers=TG_BOT_WORKERS,
-            bot_token=TG_BOT_TOKEN
+            bot_token=6335802263:AAHuSRsupWcEBmalhFLeixZ511b5WJ3TYJw
         )
         self.LOGGER = LOGGER
 
@@ -24,27 +24,27 @@ class Bot(Client):
         await super().start()
         usr_bot_me = await self.get_me()
 
-        if FORCE_SUB_CHANNEL:
+        if FORCE_SUB_CHANNEL:https://t.me/+UXi3l-72TeMxOWU9
             try:
-                link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                link = (await self.get_chat(https://t.me/+UXi3l-72TeMxOWU9)).invite_link
                 if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-                    link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                    await self.export_chat_invite_link(https://t.me/+UXi3l-72TeMxOWU9)
+                    link = (await self.get_chat(https://t.me/+UXi3l-72TeMxOWU9)).invite_link
                 self.invitelink = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
-                self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
+                self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {-1001394587233}")
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
                 sys.exit()
         try:
-            db_channel = await self.get_chat(CHANNEL_ID)
+            db_channel = await self.get_chat(-1001896066430)
             self.db_channel = db_channel
             test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
             await test.delete()
         except Exception as e:
             self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
+            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {-1001896066430}")
             self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
             sys.exit()
 
